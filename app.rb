@@ -16,5 +16,6 @@ get ('/output') do
   parcel = Parcels.new(@length, @width, @height, @weight, @speed)
   @volume_feet = parcel.volume()
   @cost_to_ship = parcel.cost_to_ship()
+  @gift_wrap = parcel.gift_wrap()
   erb(:output)
 end

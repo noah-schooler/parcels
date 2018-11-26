@@ -40,8 +40,11 @@ class Parcels
       cost += 0
     end
   end
-  #
-  # def gift_wrap
-  #
-  # end
+
+  def gift_wrap
+    @SurfArea = 2 * ((@width * @length) + (@height * @length) + (@height * @width))
+    @giftcosts = (@SurfArea * 0.001).round(2)
+  end
 end
+
+parcel = Parcels.new(36, 36, 36, 45, "one-day")
