@@ -14,8 +14,7 @@ get ('/output') do
   @weight = params['weight'].to_i
   @speed = params['speed']
   parcel = Parcels.new(@length, @width, @height, @weight, @speed)
-  binding.pry
-  @volume = parcel.volume()
+  @volume_feet = parcel.volume()
   @cost_to_ship = parcel.cost_to_ship()
   erb(:output)
 end

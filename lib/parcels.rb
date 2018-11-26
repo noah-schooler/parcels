@@ -11,6 +11,7 @@ class Parcels
 
   def volume()
     @volume = @length * @width * @height
+    @volume_feet = (@volume * 0.00057870).round(2)
   end
 
   def cost_to_ship
@@ -39,6 +40,8 @@ class Parcels
       cost += 0
     end
   end
+  #
+  # def gift_wrap
+  #
+  # end
 end
-
-parcel = Parcels.new(3,4,5,16, "free")
