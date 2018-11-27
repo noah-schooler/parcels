@@ -7,7 +7,7 @@ get ('/') do
   erb(:input)
 end
 
-get ('/output') do
+post('/output') do
   @length = params['length'].to_i
   @width = params['width'].to_i
   @height = params['height'].to_i

@@ -6,7 +6,7 @@ require ('pry')
 describe('parcels#volume') do
   it("returns volume of parcel") do
     parcel = Parcels.new(3, 4, 5, 16, "free")
-    expect(parcel.volume()).to(eq(60))
+    expect(parcel.volume()).to(eq(0.03))
   end
 end
 
